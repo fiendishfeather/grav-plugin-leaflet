@@ -7,9 +7,9 @@
 		<script>
 			var map = L.map('{{ id }}').setView([{{ lat }}, {{ lng }}], {{ zoom }});
 
-			L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
+			L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                attribution: 'Tiles &copy; Esri <br> Range data provided by <a href="https://www.iucnredlist.org/">IUCN</a>'
+            }).addTo(map);
 
 			var marker = L.marker([{{ lat_marker }}, {{ lng_marker }}])
 				.addTo(map)
