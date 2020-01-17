@@ -60,6 +60,7 @@ class LEafletPlugin extends Plugin
 			'lng_marker'       => $this->config->get('lng_marker'),
 			'zoom'      => $this->config->get('zoom'),
 			'address'   => $this->config->get('address'),
+			'geojson'   => $this->config->get('geojson'),
 			'instances' => self::$instances
 		];
 

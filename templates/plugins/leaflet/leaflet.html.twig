@@ -15,6 +15,18 @@
 				.addTo(map)
 				.bindPopup("{{ address }}")
             	.openPopup();
+
+            $.ajax({
+        		type: "POST",
+        		url: '/user/data/geojson/{{ geojson }}_geojson.js',
+        		dataType: 'json',
+        		success: function (response) {
+        			geojsonLayer = L.geoJson(response).addTo(map);
+        			map.fitBounds(geojsonLayer.getBounds());
+        			$("#info").fadeOut(500);
+        		}
+        	});
+
 		</script>
 
 {% endif %}
