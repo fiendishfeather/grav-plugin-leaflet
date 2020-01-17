@@ -1,8 +1,8 @@
 <div id="{{ id }}" style="width: {{ width }}px; height: {{ height }}px"></div>
 {{type}}
 {% if not instances %}
-		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.1.0/leaflet.css" />
-		<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/1.1.0/leaflet.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
 
 		<script>
 			var map = L.map('{{ id }}').setView([{{ lat }}, {{ lng }}], {{ zoom }});
